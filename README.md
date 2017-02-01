@@ -16,7 +16,7 @@ This codebase has two criteria:
   * DB Setup
 
   I am sadly a WSL user (Yes, Windows, Subsystem, (for) Linux), so I can't run post-install pg-init scripts. So step 1 is make a new psql database named `meme-magic`. Thats it.
-
+  
   If you wanted a DB named whatever you want it to be named
 
   * Secrets
@@ -48,17 +48,17 @@ That's it. Enjoy.
 ## Some Known Confusion
 
   I have had some annoying experiences with socket leakage and Node. Until I get around to having Redis be a part of the backend to deal with enabling more than 25 sockets per Node instance - I have a mechanism set up to ensure each user (being a person) only gets 1 socket per IP. *This means that if you try to open two tabs of your project on the same machine - you get Rick Rolled away from my site.* To disable such beautiful functionality simply go to `./browser/sockets/index.js`. You will see some well commented code about a certain socket event named `KickTroll` - just change its behavior to anything else or remove it.
-
+  
   The only other one I can remember at present is the requirement to enter `y` or `n` on intialization of the DB to decide whether to force sync the DB. This too can easily be removed in the root directory `./app.js`:
 
 ```
 const syncTruth = getYesNo(chalk.cyan('Rick, do you wanna get savage on this database? (Force Sync)'));
 
- // If you want to disable this - change syncTruth to:
+ // If you want to disable this - change syncTruth to: 
  // const syncTruth = false : wont ever forceSync.
- // or
+ // or 
  // const syncTruth = true : will always forceSync.
-
+ 
 startDB(syncTruth)
   .then(() => server.on('request', myServer))
   .then(() => ioInit(server))

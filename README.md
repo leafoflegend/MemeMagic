@@ -13,13 +13,13 @@ I built this to be a performant, easy to deploy, ES6 God, and most importantly -
 
 This codebase has two criteria:
 
-  # DB Setup
+  * DB Setup
 
   I am sadly a WSL user (Yes, Windows, Subsystem, (for) Linux), so I can't run post-install pg-init scripts. So step 1 is make a new psql database named `meme-magic`. Thats it.
   
   If you wanted a DB named whatever you want it to be named
 
-  # Secrets
+  * Secrets
 
   Make a `secrets.js` file in the root directory. It should contain:
 
@@ -27,7 +27,7 @@ This codebase has two criteria:
     SessionKey: 'WhateverYouWant'
   };`
 
-  # AFrame w/ React/Redux or just React/Redux
+  * AFrame w/ React/Redux or just React/Redux
 
   Go to `./browser/react/containers/index.js` -> From there you will see this logic:
 

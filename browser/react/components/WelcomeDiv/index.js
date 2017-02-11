@@ -1,26 +1,23 @@
 import React, { Component } from 'react';
 import styles from './styles';
-import BasicSingleLineInput from '../BasicSingleLineInput';
-import InitialLoading from '../InitialLoading';
+import SpacePlane from '../SpacePlane';
+import WelcomeText from '../WelcomeText';
 
 export default class WelcomeDiv extends Component {
   render () {
-    const { welcomeText, handleSubmit, isInitialized } = this.props;
+    const { welcomeText, handleSubmit, isInitialized, isAFrame } = this.props;
 
     return (
       <div style={styles.container}>
-        <div style={styles.test}>
         {
-          isInitialized
-           ?
-          (<div>
-            <h1> { welcomeText } </h1>
-            <BasicSingleLineInput handleSubmit={handleSubmit} />
-          </div>)
-           :
-          (<InitialLoading />)
+          isAFrame ? (<SpacePlane />) : (
+            <WelcomeText
+              handleSubmit={handleSubmit}
+              welcomeText={welcomeText}
+              isInitialized={isInitialized}
+            />
+          )
         }
-        </div>
       </div>
     );
   }
@@ -34,5 +31,7 @@ WelcomeDiv.defaultProps = {
 
 WelcomeDiv.propTypes = {
   welcomeText: React.PropTypes.string,
-  handleSubmit: React.PropTypes.func
+  handleSubmit: React.PropTypes.func,
+  isInitialized: React.PropTypes.bool,
+  isAFrame: React.PropTypes.bool
 };

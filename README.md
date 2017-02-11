@@ -1,7 +1,7 @@
 ## Meme Magic
 
 It's a terrible name, I know. Doesn't summarize this app at all. Here it is:
-Meme Magic is a heavy handed backend boiler plate (Sockets, PSQL, Sessions, Routes, some beginnings of Auth) with some very light front end stuff set up. What little is set up on the front end is beautiful (PropTypes, Immutable.js for Redux Store, ES6, AFrame - with all of AFrames caveats built in to avoid race conditions), and the backend is fully set except your choice of login system at the moment.
+Meme Magic is a heavy handed backend boiler plate (Sockets, PSQL, Sessions, Routes, Authentication) with some very light front end stuff set up. What little is set up on the front end is beautiful (PropTypes, Immutable.js for Redux Store, ES6, AFrame - with all of AFrames caveats built in to avoid race conditions).
 
 I made this boiler plate able to switch between AFrame with React/Redux - or to strictly be a React/Redux boiler plate. It defaults to AFrame with React/Redux - to switch this, check out installation below.
 
@@ -60,7 +60,7 @@ startDB(syncTruth)
 
 ## Tests
 
-Tests and deciding on the easiest Authentication to use are my current step in this project - 2/1/17
+Tests are incoming.
 
 ## License
 

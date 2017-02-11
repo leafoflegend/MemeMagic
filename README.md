@@ -31,17 +31,9 @@ This codebase has two criteria:
 
   Go to `./browser/react/containers/index.js` -> From there you will see this logic:
 
-```
-// This is React/Redux.
-import AppCon from './AppContainer';
-
-// This is AFrame w/ React/Redux.
-import AFCon from './AFrameContainer';
-
-export const AppContainer = AFCon;
-```
-
   Just switch it to export whichever beginning plate you would like to use.
+
+As of 2/11/17 - AFrame and React now play nice together in the base. `SpacePlane` is the WebVR component, just eliminate it if you desire no AFrame.
 
 That's it. Enjoy.
 

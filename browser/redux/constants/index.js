@@ -1,3 +1,5 @@
 export const CHANGE_WELCOME = 'CHANGE_WELCOME';
 
 export const SET_INITIALIZED = 'SET_INITIALIZED';
+
+export const CHANGE_MODE = 'CHANGE_MODE';

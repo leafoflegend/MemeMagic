@@ -13,7 +13,9 @@ configServer(app, _db);
 configSessions(app);
 
 import Routes from './routes';
+import Auth from './authentication';
 
+app.use('/auth', Auth);
 app.use('/api', Routes);
 
 app.get('/*', (req, res) => {

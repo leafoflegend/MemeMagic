@@ -3,6 +3,7 @@
 import setVariables from './app-variables';
 import setParsing from './parsing';
 import setStatic from './static';
+import setSecurity from './security';
 
 export default (app, _db) => {
   // Force the context of this.
@@ -15,7 +16,8 @@ export default (app, _db) => {
   // Give myself a logging ability.
   app.use(app.getValue('log'));
 
-  // Configure my static routes and parsing abilities.
+  // Configure my static routes, security, and parsing abilities.
   setParsing(app, _db);
+  setSecurity(app, _db);
   setStatic(app);
 };

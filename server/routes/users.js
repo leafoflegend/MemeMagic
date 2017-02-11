@@ -25,10 +25,8 @@ router.post('/signup', (req, res, next) => {
       })
       .then(createdUser => res.status(200).send({message: 'User created!'}));
     } else {
-      const loginError = new Error('That email is already being used.');
-      loginError.status = 401;
       console.log(chalk.red('Someone tried to impersonate Rick again, but I know a C-137 when I see one.'));
-      return next(loginError);
+      return res.status(401).send({ message: 'That email is already being used.' });
     }
   })
   .catch(next);

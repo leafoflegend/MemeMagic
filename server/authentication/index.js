@@ -33,7 +33,7 @@ router.post('/login', (req, res, next) => {
 router.get('/logout', (req, res) => {
   console.log(chalk.green('User Logout Performed.'));
   req.logout();
-  res.status(200).end();
+  res.status(200).send({ message: 'Successfully logged out.' });
 });
 
 export default router;

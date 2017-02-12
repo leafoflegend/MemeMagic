@@ -2,6 +2,7 @@
 
 import passport from 'passport';
 import setLocalSecurity from './local';
+import _ from 'lodash';
 
 export default (app, _db) => {
   // Get the User model.
@@ -16,7 +17,8 @@ export default (app, _db) => {
   passport.deserializeUser((id, done) => {
     User.findById(id)
       .then(user => {
-        done(null, user);
+        const formattedUser = _.omit(user.toJSON(), ['Password', 'Salt']);
+        done(null, formattedUser);
       })
       .catch(done);
   });

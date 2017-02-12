@@ -32,4 +32,9 @@ router.post('/signup', (req, res, next) => {
   .catch(next);
 });
 
+router.get('/me', (req, res, next) => {
+  if (req.user) res.status(200).send({ Me: req.user });
+  else res.status(400).send({ Me: 'A girl has no name.' });
+});
+
 export default router;

@@ -17,7 +17,7 @@ This codebase has two criteria:
 
   I am sadly a WSL user (Yes, Windows, Subsystem, (for) Linux), so I can't run post-install pg-init scripts. So step 1 is make a new psql database named `meme-magic`. Thats it.
   
-  If you wanted a DB named whatever you want it to be named
+  If you wanted a DB named whatever you want it to be named go to `server/db/db` and modify line 7's `const memeDB = WhateverYouWant`.
 
   * Secrets
 

@@ -1,7 +1,7 @@
 'use strict';
 
 import db from '../db';
-import { saltMyFries } from '../../utils';
+import { saltMyFries, packMyFries } from '../../utils';
 import _ from 'lodash';
 import crypto from 'crypto';
 import chalk from 'chalk';
@@ -37,7 +37,7 @@ export default db.define('user', {
       // Returns user info, except password and salt.
       cleanHands: function () {
         console.log(chalk.cyan('Cleaning hands...'));
-        return _.omit(this.toJSON(), ['Password', 'Salt']);
+        return packMyFries(this);
       },
       // Verifies password match.
       verifySaltiness: function (passAttempt) {

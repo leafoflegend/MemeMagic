@@ -10,7 +10,7 @@ export default class WelcomeDiv extends Component {
     return (
       <div style={styles.container}>
         {
-          isAFrame ? (<SpacePlane />) : (
+          isAFrame ? (<SpacePlane isAFrame={ isAFrame } />) : (
             <WelcomeText
               handleSubmit={handleSubmit}
               welcomeText={welcomeText}

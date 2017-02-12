@@ -4,7 +4,7 @@ import TheOrb from '../AFrame-Components/TheOrb';
 import TheGround from '../AFrame-Components/TheGround';
 import TheLight from '../AFrame-Components/TheLight';
 
-export default () => (
+export default ({ isAFrame }) => (
   /*
     You'll notice that I only use a-entity. This seems to be the solution
     to many of the race conditions that appear in react/redux playing

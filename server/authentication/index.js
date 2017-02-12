@@ -7,18 +7,18 @@ import passport from 'passport';
 
 // The login route.
 router.post('/login', (req, res, next) => {
-  console.log(chalk.green('Someones trying to get in...'));
+  console.log(chalk.green('We got a new order for perfectly salted fries!'));
   // The passport callback function.
   const authorizeUser = (err, user) => {
     if (err) return next(err);
     if (!user) {
-      console.log(chalk.red('They aint get in, dont worry!'));
+      console.log(chalk.red('We would never sell fries of that quality.'));
       return res.status(401).send({ message: 'Failed login attempt.' });
     }
 
     // Login time!
     req.logIn(user, () => {
-      console.log(chalk.green('They done did get in!'));
+      console.log(chalk.green('Perfect fries delivered to a hungry customer.'));
       res.status(200).send({
         user: user.cleanHands()
       });

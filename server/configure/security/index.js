@@ -2,7 +2,7 @@
 
 import passport from 'passport';
 import setLocalSecurity from './local';
-import _ from 'lodash';
+import { packMyFries } from '../../utils';
 
 export default (app, _db) => {
   // Get the User model.
@@ -17,7 +17,7 @@ export default (app, _db) => {
   passport.deserializeUser((id, done) => {
     User.findById(id)
       .then(user => {
-        const formattedUser = _.omit(user.toJSON(), ['Password', 'Salt']);
+        const formattedUser = packMyFries(user);
         done(null, formattedUser);
       })
       .catch(done);

@@ -27,12 +27,6 @@ This codebase has two criteria:
     SessionKey: 'WhateverYouWant'
   };`
 
-  * AFrame w/ React/Redux or just React/Redux
-
-  Go to `./browser/react/containers/index.js` -> From there you will see this logic:
-
-  Just switch it to export whichever beginning plate you would like to use.
-
 As of 2/11/17 - AFrame and React now play nice together in the base. `SpacePlane` is the WebVR component, just eliminate it if you desire no AFrame.
 
 That's it. Enjoy.

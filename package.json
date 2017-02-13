@@ -1,13 +1,17 @@
 {
   "name": "meme-magic",
-  "version": "0.0.1",
-  "description": "A medium sized back-end boiler plate, with very little done on the front.",
+  "version": "0.1.0",
+  "description": "A A-Frame, React, Redux front-end with Sessions, Websockets, SQL, and Authentication built into the backend.",
   "main": "app.js",
   "scripts": {
     "start": "webpack -w & nodemon --watch server -e js,html babelify.js"
   },
+  "engines": {
+    "node": ">=7.0.0"
+  },
   "author": "Eliot Szwajkowski",
-  "license": "ISC",
+  "email": "eliotpszw@gmail.com",
+  "license": "Apache-2.0",
   "dependencies": {
     "aframe": "^0.5.0",
     "axios": "^0.15.3",
@@ -58,5 +62,25 @@
     "standard": "^8.5.0",
     "volleyball": "^1.4.1",
     "webpack": "^1.13.3"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leafoflegend/MemeMagic.git"
+  },
+  "keywords": [
+    "AFrame",
+    "React",
+    "Redux",
+    "Postgres",
+    "Sockets",
+    "Boiler",
+    "Plate",
+    "Sessions",
+    "Authentication"
+  ],
+  "bugs": {
+    "url": "https://github.com/leafoflegend/MemeMagic/issues"
+  },
+  "homepage": "https://github.com/leafoflegend/MemeMagic#readme"
 }

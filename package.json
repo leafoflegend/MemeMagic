@@ -1,6 +1,6 @@
 {
   "name": "meme-magic",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An A-Frame, React, Redux front-end with Sessions, Websockets, SQL, and Authentication built into the backend.",
   "main": "app.js",
   "scripts": {

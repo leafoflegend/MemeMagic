@@ -1,7 +1,7 @@
 {
   "name": "meme-magic",
   "version": "0.1.0",
-  "description": "A A-Frame, React, Redux front-end with Sessions, Websockets, SQL, and Authentication built into the backend.",
+  "description": "An A-Frame, React, Redux front-end with Sessions, Websockets, SQL, and Authentication built into the backend.",
   "main": "app.js",
   "scripts": {
     "start": "webpack -w & nodemon --watch server -e js,html babelify.js",

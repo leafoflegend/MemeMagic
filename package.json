@@ -5,8 +5,8 @@
   "main": "serverES6/index.js",
   "scripts": {
     "build": "webpack && babel serverES6 -d prodServer --presets es2015",
-    "serve": "node prodServer",
-    "start": "webpack -w & nodemon serverES6 --exec babel-node --presets es2015"
+    "start": "node prodServer",
+    "dev": "webpack -w & nodemon serverES6 --exec babel-node --presets es2015"
   },
   "author": "Eliot Szwajkowski",
   "license": "ISC",

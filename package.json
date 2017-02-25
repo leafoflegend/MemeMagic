@@ -2,9 +2,11 @@
   "name": "meme-magic",
   "version": "0.0.1",
   "description": "A medium sized back-end boiler plate, with very little done on the front.",
-  "main": "app.js",
+  "main": "serverES6/index.js",
   "scripts": {
-    "start": "webpack -w & nodemon app.js --exec babel-node --presets es2015"
+    "build": "webpack && babel serverES6 -d prodServer --presets es2015",
+    "serve": "node prodServer",
+    "start": "webpack -w & nodemon serverES6 --exec babel-node --presets es2015"
   },
   "author": "Eliot Szwajkowski",
   "license": "ISC",

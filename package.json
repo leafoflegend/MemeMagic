@@ -1,12 +1,14 @@
 {
   "name": "meme-magic",
-  "version": "0.1.1",
+  "version": "0.0.1",
   "description": "An A-Frame, React, Redux front-end with Sessions, Websockets, SQL, and Authentication built into the backend.",
-  "main": "app.js",
+  "main": "serverES6/index.js",
   "scripts": {
-    "start": "webpack -w & nodemon --watch server -e js,html babelify.js",
-    "postinstall": "node ./post-install.js"
-  },
+    "build": "webpack && babel serverES6 -d prodServer --presets es2015",
+    "start": "node prodServer",
+    "dev": "webpack -w & nodemon serverES6 --exec babel-node --presets es2015"
+      "postinstall": "node ./post-install.js"
+},
   "engines": {
     "node": ">=7.0.0"
   },
@@ -16,13 +18,14 @@
   "dependencies": {
     "aframe": "^0.5.0",
     "axios": "^0.15.3",
-    "babel": "^6.5.2",
-    "babel-core": "^6.18.2",
-    "babel-loader": "^6.2.8",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
     "babel-plugin-transform-object-rest-spread": "^6.20.2",
-    "babel-preset-es2015": "^6.18.0",
-    "babel-preset-react": "^6.16.0",
-    "babel-register": "^6.18.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-register": "^6.23.0",
     "bluebird": "^3.4.6",
     "body-parser": "^1.15.2",
     "chalk": "^1.1.3",

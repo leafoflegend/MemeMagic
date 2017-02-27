@@ -17,11 +17,11 @@ This codebase has two criteria:
 
   I am sadly a WSL user (Yes, Windows, Subsystem, (for) Linux), so I can't run post-install pg-init scripts. So step 1 is make a new psql database named `meme-magic`. Thats it.
 
-  If you wanted a DB named whatever you want it to be named go to `server/db/db` and modify line 7's `const memeDB = WhateverYouWant`.
+  If you wanted a DB named whatever you want it to be named go to `serverES6/server/db/db` and modify line 7's `const memeDB = WhateverYouWant`.
 
   * Secrets
 
-  Make a `secrets.js` file in the root directory. It should contain:
+  Make a `secrets.js` file in the `serverES6` directory. It should contain:
 
   `export default {
     SessionKey: 'WhateverYouWant'
@@ -51,6 +51,10 @@ startDB(syncTruth)
   .catch(err => console.error(err))
   .finally(() => server.listen(_Port, () => console.log(chalk.magenta(`Meme magic has begun on Port ${_Port}`))));
 ```
+
+## Dev and Production Scripts
+
+Use ```npm run dev``` while in development, which will run Webpack and Nodemon watchers. For production, use ```npm run build``` to build once with Webpack and Babel, then ```npm start``` to serve the built files.
 
 ## Tests
 

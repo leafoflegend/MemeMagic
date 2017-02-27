@@ -1,0 +1,1 @@
+console.log("Please read the README.md, there are two additional steps required before this will work. Adding a secrets.js that exports a SessionKey string, and making a DB named 'meme-magic', or modify the code to have a DB named whatever you like.");
